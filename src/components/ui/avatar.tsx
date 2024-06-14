@@ -9,7 +9,7 @@ const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
 >(({ className, ...props }, ref) => (
-  <div className={cn("relative flex overflow-visible")}>
+  <div className={cn("inline-block self-start relative")}>
     <AvatarPrimitive.Root
       ref={ref}
       className={cn(

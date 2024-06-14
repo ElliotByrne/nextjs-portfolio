@@ -1,16 +1,24 @@
 import { ReactNode } from "react";
+import { bitter_serif } from "../../app/fonts";
+import { cn } from "@/lib/utils";
 
 interface TypographyInterface {
   children: ReactNode;
+  size?: "small";
 }
 
-export function TypographyP({ children }: TypographyInterface) {
-  return <p className="leading-7 [&:not(:first-child)]:mt-6">{children}</p>;
+export function TypographyP({ children, size }: TypographyInterface) {
+  return <p className={cn("", size === "small" && "text-sm")}>{children}</p>;
 }
 
 export function TypographyH1({ children }: TypographyInterface) {
   return (
-    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+    <h1
+      className={cn(
+        "scroll-m-20 text-xl font-bold tracking-tight font-serif",
+        bitter_serif.variable
+      )}
+    >
       {children}
     </h1>
   );
@@ -18,7 +26,7 @@ export function TypographyH1({ children }: TypographyInterface) {
 
 export function TypographyH2({ children }: TypographyInterface) {
   return (
-    <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+    <h2 className="scroll-m-20 pb-2 text-lg font-medium tracking-tight first:mt-0">
       {children}
     </h2>
   );
@@ -26,7 +34,7 @@ export function TypographyH2({ children }: TypographyInterface) {
 
 export function TypographyH3({ children }: TypographyInterface) {
   return (
-    <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+    <h3 className="scroll-m-20 text-md font-semibold tracking-tight">
       {children}
     </h3>
   );
