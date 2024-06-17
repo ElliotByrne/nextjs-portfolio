@@ -1,6 +1,6 @@
 import { Separator } from "./ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Link, LinkC } from "./ui/link";
+import { LinkC } from "./ui/link";
 import {
   TypographyH1,
   TypographyH2,
@@ -49,7 +49,7 @@ export function TimelineItem({
   );
 }
 
-export default function Timeline({ children }) {
+export default function Timeline({ children }: { children: ReactNode }) {
   return (
     <div className={cn("mt-6")}>
       <TypographyH2>Experience</TypographyH2>
