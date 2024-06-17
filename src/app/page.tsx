@@ -1,8 +1,5 @@
-import Header from "@/components/header";
 import Timeline, { TimelineItem } from "@/components/timeline";
-import { Button } from "@/components/ui/button";
-import { TypographyH2, TypographyP } from "@/components/ui/typography";
-import Image from "next/image";
+import { TypographyP } from "@/components/ui/typography";
 
 export default function Home() {
   return (

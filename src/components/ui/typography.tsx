@@ -55,7 +55,7 @@ export function TypographyBlockquote({ children }: TypographyInterface) {
 }
 
 export function TypographyList({ children }: TypographyInterface) {
-  return <ul className="my-6 ml-6 list-disc [&>li]:mt-2">{children}</ul>;
+  return <ul className="mt-2 list-disc [&>li]:mt-2 list-inside">{children}</ul>;
 }
 
 export function TypographyInlineCode({ children }: TypographyInterface) {
